@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music_background"
+    android:orientation="vertical"
+    tools:context="com.example.find_mp3.Request_Mp3List" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/music_select_top"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.60"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="All Search"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="20dp"
+            android:layout_height="17dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/music_search_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BestRhythmer_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/music_bestrhythmer"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="7dp"
+                android:text="Best Rhythmer"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/BestRhythmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="5dp"
+                android:text="BestRhythmer"
+                android:textColor="@android:color/black"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/music_playbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/music_playbtn" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/music_background" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            android:choiceMode="none"
+            android:clickable="false"
+            android:divider="#FFFFFF"
+            android:focusable="false"
+            android:cacheColorHint="#00000000"
+            android:focusableInTouchMode="false"
+            android:longClickable="false" />
+    </LinearLayout>
+
+</LinearLayout>
