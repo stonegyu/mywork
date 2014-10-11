@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+        int input, i, a[1000];
+        int min=99999, max=-1;
+        scanf("%d",&input);
+        for(i=0; i<input; i++){
+                scanf("%d",&a[i]);
+                max = (max>a[i])?max:a[i];
+                min = (min<a[i])?min:a[i];
+        }
+        int result =(max-min-17);
+        if(result<=0) {
+		printf("0");
+		return 0;
+	}
+        int sum=0;
+        result/=2;
+        for(i=0; i<input; i++){
+                if(result>a[i]){
+                        int gap = (result+min)-a[i];
+                        sum+=gap*gap;
+                        printf("%d %d %d\n",result, a[i], gap);
+                }else if((max-result)<a[i]){
+                        int gap = a[i]-(max-result);
+                        sum+=gap*gap;
+                        printf("%d %d %d\n",result, a[i], gap);
+                }
+        }
+        printf("%d\n",sum);
+        return 0;
+}
